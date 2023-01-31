@@ -6,131 +6,174 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carlos Carrillo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <header>
-        <nav>
-            <a href="#home">🏠Home</a>
-            <a href="#about">📙About me</a>
-            <a href="#projects">🚧 Projects</a>
-            <a href="#contact">📧Contact</a>
-            
-            
+<body class="body">
 
-        </nav>
+
+    <header>
+        <div id="menuDemo">
+            <!--start CssMenu-->
+            <div id="cssmenu">
+                <ul>
+                    <li class="first"><a href="#home">Home</a></li>
+                    <li class="rest"><a href="#about">About</a></li>
+                    <li class="rest"><a href="#projects">Projects</a></li>
+                    <li class="rest"><a href="#contact">Contact</a></li>
+                    <li class="rest"> <a href="#spain"> <img src="./media/espana.png" alt="" width="20px" ></a></li>
+                </ul>
+            </div>
     </header>
     <main>
         <section id="home">
-            <div>
-                <h1> 👋 Hi!, I'm Carlos Carrillo, <br> Sofware Developer </h1>
-
-                <ul>
-                    <img src="./media/html-5.png" alt="a">
-                    <img src="./media/css.png" alt="b">
-                    <img src="./media/js.png" alt="c">
-                    <img src="./media/php.png" alt="d">
-                    <img src="./media/mysql.png" alt="">
+            <div id="left">
+                <h1 class="hi"> <span class="man">👋</span> Hi, I'm </h1>
+                <h2 class="name"> Carlos Carrillo Pérez</h2> <br>
+                <div class="softwaredev">
+                    <h3>Web Developer</h3>
+                <h6>carlos1997bnf@gmail.com</h6>
+                </div>
+                
+                <ul class="software">
+                    <img class="bounce-top" src="./media/html-5.png" alt="a" width="50px">
+                    <img class="bounce-top" src="./media/css.png" alt="b" width="50px">
+                    <img class="bounce-top" src="./media/js.png" alt="c" width="50px">
+                    <img class="bounce-top" src="./media/php.png" alt="d" width="50px">
+                    <img class="bounce-top" src="./media/mysql.png" alt="e" width="50px">
+                    <img class="bounce-top" src="./media/java.png" alt="f" width="50px">
 
                 </ul>
-
+                <button id="button2"> <a class="a" href="media/carloscv.pdf">MY RESUME</a> </button>
             </div>
             <div class="fotoperfil">
-                <img src="./media/carlos_carrillo_sofware_developer-0.png" width="400px" height="280px" alt="fotoperfil">
+                <img class="carlos" src="./media/carlos_carrillo_sofware_developer-0.png" width="400px" height="280px"
+                    alt="fotoperfil">
             </div>
-            <a href="./media/carloscv.pdf" title="myresume">
-                <button> MY RESUME</button>
-            </a>
-
-
         </section>
 
-
         <section id="about">
-            <h3> 📙About me </h3>
-            <p>Frontend Developer 👨‍💻, Competent in project management.
-                Characterized by high adaptability, dedication and motivation to work. Also, trained to
-                work as a team, providing high-performance, scalable solutions and following good
-                practices.
-            </p>
-            <a href="mailto:carlos1997bnf@gmail.com" title="email" target="_blank">
-                <img src="./media/email (1).png" alt="email">
-            </a>
+            <div class="grid-container2">
+                <div class="leftAbout">
+                    <img class="fotoabout" src="./media/desarrollo-software-i-cloud-seven-3.png" width="500px"
+                        height="380px" alt="fotoperfil">
+                </div>
+                <div class="rightAbout">
+                    <h2 class="habout"> About me </h2>
+                    <p class="pabout">Frontend Developer 👨‍💻, Competent in project management.
+                        Characterized by high adaptability, dedication and motivation to work. Also, trained to
+                        work as a team,<br>providing high-performance, scalable solutions and following good
+                        practices.
+                    </p>
+                </div>
+                <div class="bottonAbout">
+                    <a href="mailto:carlos1997bnf@gmail.com" title="email" target="_blank">
+                        <img class="bounce-top" src="./media/icons8-mail-100.png" alt="email">
+                    </a>
 
-            <a href="https://www.linkedin.com/in/carlos-carrillo-p%C3%A9rez-b27094224/" target="_blank">
-                <img src="./media/linkedin (1).png" alt="linkedin">
-            </a>
+                    <a href="https://www.linkedin.com/in/carlos-carrillo-p%C3%A9rez-b27094224/" target="_blank">
+                        <img class="bounce-top" src="./media/icons8-linkedin-100.png" alt="linkedin">
+                    </a>
 
 
-            <a href="https://www.instagram.com/kcarlos23" target="_blank">
-                <img src="./media/instagram (1).png" alt="instagram">
-            </a>
+                    <a href="https://www.instagram.com/kcarlos23" target="_blank">
+                        <img class="bounce-top" src="./media/icons8-instagram-100.png" alt="instagram">
+                    </a>
 
-            <a href="" target="_blank">
-                <img src="./media/github.png" alt="github">
-            </a>
-
+                    <a href="https://github.com/CarlosCarrilloP" target="_blank">
+                        <img class="bounce-top" src="./media/icons8-github-100.png" alt="github">
+                    </a>
+                </div>
+            </div>
+            <a href="#" class="btn-flotante"> <img src="./media/icons8-arriba-100.png" width="80px" alt="flecha"></a>
         </section>
 
 
         <section id="projects"> <!--- pensar como escalar este botón, desplegable y que explique el proyect?-->
-            
-
-            <h3>🚧Last projects</h3>
-            <a href="https://github.com/CarlosCarrilloP/"  target="_blank">
-                <img src="./media/desktop-preview.jpg" width="400px" height="260px"alt="project_github">
-
-            </a>
+            <div class="projects">
+                <div class="tittleprojects">
+                    <h3 class="hprojects">Last projects</h3>
+                </div>
+                <div class="project1">
+                    <a href="https://github.com/CarlosCarrilloP/" target="_blank">
+                        <img src="./media/desktop-preview.jpg" width="400px" height="260px" alt="project_github">
+                    </a>
+                </div>
+                <div class="project2">
+                    <a href="https://github.com/CarlosCarrilloP/" target="_blank">
+                        <img src="./media/desktop-preview.jpg" width="400px" height="260px" alt="project_github">
+                    </a>
+                </div>
+                <div class="project3">
+                    <a href="https://github.com/CarlosCarrilloP/" target="_blank">
+                        <img src="./media/desktop-preview.jpg" width="400px" height="260px" alt="project_github">
+                    </a>
+                </div>
+                <div class="project4">
+                    <a href="https://github.com/CarlosCarrilloP/" target="_blank">
+                        <img src="./media/desktop-preview.jpg" width="400px" height="260px" alt="project_github">
+                    </a>
+                </div>
+                <div class="project5">
+                    <a href="https://github.com/CarlosCarrilloP/" target="_blank">
+                        <img src="./media/desktop-preview.jpg" width="400px" height="260px" alt="project_github">
+                    </a>
+                </div>
+                <div class="project6">
+                    <a href="https://github.com/CarlosCarrilloP/" target="_blank">
+                        <img src="./media/desktop-preview.jpg" width="400px" height="260px" alt="project_github">
+                    </a>
+                </div>
+            </div>
         </section>
 
-
         <section id="contact">
-            <h3> 📧Contact me</h3>
-            <form method="POST" action="sendform.php" id="contact-form">
 
-                <p><label> Name (required)<br>
-                        <input type="text" name="your-name" required value="" size="40"> </label>
-                </p>
-                <p><label> Surname (required)<br>
-                        <input type="text" name="apellidos" required value="" size="40">
-                    </label>
-                </p>
+            <form class="form">
+                <h2 id="h2">📧Contact me: </h2>
+                <p id="p">Name: <span class="star">*</span></p><input id="input" placeholder="Write your name here.."
+                    required></input>
+                <p id="p">Email: <span class="star">*</span></p><input id="input"
+                    placeholder="Let us know how to contact you back.." required></input>
+                <p id="p">Message: <span class="star">*</span></p><input id="input"
+                    placeholder="What would you like to tell us.." required></input>
+                <button id="button">Send Message</button>
 
-                <p><label> E-mail (required)<br>
-                        <input type="email" name="your-email" required value="" size="40">
-                    </label>
-                </p>
-                <p><label> Phone <br>
-                        <input type="tel" name="tel-906" value="" size="14">
-                    </label>
-                </p>
-
-                <p><label> Observations<br>
-                        <textarea name="your-message" cols="40" rows="1"></textarea>
-                    </label>
-                </p>
-
-                <p><input type="submit" value="Enviar"></p>
             </form>
+
         </section>
 
     </main>
-    
-    <footer>
-        <div>
-            <h5>Navigation</h5>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
 
-            </ul>
-        </div>
-        <div>
-            <h5>Contact me:</h5>
-            <ul>
-                <li><span>Email:</span> <span>carlos1997bnf@gmail.com</span></li>
-            </ul>
+    <footer>
+        <div class="footer">
+            <div class="footer-left">
+                    <ul class="ulfooter-left">
+                        <li><a href="#Home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+            </div>
+            <div class="footer-center">
+                    <p class="pfooter"> Powered by: CARLOS CARRILLO PÉREZ 2023 ©</p>
+            </div>
+            <div class="footer-right">
+                    <h5 class="hfooter">Contact me:</h5>
+                    <span class="hfooter"> <a href="mailto:carlos1997bnf@gmail.com" title="email" target="_blank">
+                                <img src="./media/mail.png" alt="mail" width="35px"> </span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/carlos-carrillo-p%C3%A9rez-b27094224/" target="_blank">
+                                <img src="./media/icons8-linkedin-90.png" alt="linkedin" width="35px"></span> 
+                            </a>
+                            <a href="https://www.instagram.com/kcarlos23" target="_blank">
+                                <img src="./media/icons8-instagram-90.png" alt="instagram" width="35px"></span>
+                            </a>
+                            <a href="https://github.com/CarlosCarrilloP/" target="_blank">
+                                <img src="./media/icons8-github-squared-100.png" alt="github" width="35px"></span>
+                            </a>
+                    </span>
+            </div>
         </div>
 
     </footer>
