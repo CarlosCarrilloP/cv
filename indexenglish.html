@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carlos Carrillo</title>
     <link rel="stylesheet" href="style.css">
+    <!-- libreria que vamos a utililzar para los alerts es Sweet alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="index.js" defer></script>
 </head>
 
 <body class="body">
@@ -22,10 +25,11 @@
                     <li class="rest"><a href="#projects">Projects</a></li>
                     <li class="rest"><a href="#contact">Contact</a></li>
                     <li class="rest"> <a href="#spain"> <img src="./media/espana.png" alt="" width="20px" ></a></li>
+                    <li class="rest"><button class="theme-btn"></li>
                 </ul>
             </div>
     </header>
-    <main>
+    <main class="slider">
         <section id="home">
             <div id="left">
                 <h1 class="hi"> <span class="man">👋</span> Hi, I'm </h1>
@@ -34,7 +38,6 @@
                     <h3>Web Developer</h3>
                 <h6>carlos1997bnf@gmail.com</h6>
                 </div>
-                
                 <ul class="software">
                     <img class="bounce-top" src="./media/html-5.png" alt="a" width="50px">
                     <img class="bounce-top" src="./media/css.png" alt="b" width="50px">
@@ -47,7 +50,7 @@
                 <button id="button2"> <a class="a" href="media/carloscv.pdf">MY RESUME</a> </button>
             </div>
             <div class="fotoperfil">
-                <img class="carlos" src="./media/carlos_carrillo_sofware_developer-0.png" width="400px" height="280px"
+                <img class="carlos" src="./media/carlos_carrillo_sofware_developer-0.png" width="600px" height="420px"
                     alt="fotoperfil">
             </div>
         </section>
@@ -94,11 +97,11 @@
                 <div class="tittleprojects">
                     <h3 class="hprojects">Last projects</h3>
                 </div>
-                <div class="project1">
+                <div class="project1" class="pro">
                     <a href="https://github.com/CarlosCarrilloP/" target="_blank">
-                        <img src="./media/desktop-preview.jpg" width="400px" height="260px" alt="project_github">
-                    </a>
-                </div>
+                            <img src="./media/desktop-preview.jpg" width="400px" height="260px" alt="project_github">
+                        </a>
+                  </div>
                 <div class="project2">
                     <a href="https://github.com/CarlosCarrilloP/" target="_blank">
                         <img src="./media/desktop-preview.jpg" width="400px" height="260px" alt="project_github">
@@ -129,17 +132,20 @@
 
         <section id="contact">
 
-            <form class="form">
-                <h2 id="h2">📧Contact me: </h2>
-                <p id="p">Name: <span class="star">*</span></p><input id="input" placeholder="Write your name here.."
-                    required></input>
-                <p id="p">Email: <span class="star">*</span></p><input id="input"
-                    placeholder="Let us know how to contact you back.." required></input>
-                <p id="p">Message: <span class="star">*</span></p><input id="input"
-                    placeholder="What would you like to tell us.." required></input>
-                <button id="button">Send Message</button>
-
+            <form class="form" method="post" action="sendform.php">
+                <h2 id="h2">📧Contact me:</h2>
+                <p id="p p2">Name: <span class="star">*</span></p>
+                <input id="input" name="name" placeholder="Write your name here.." required></input>
+            
+                <p id="p p2">Email: <span class="star">*</span></p>
+                <input id="input" name="email" placeholder="Let us know how to contact you back.." required></input>
+            
+                <p id="p p2">Message: <span class="star">*</span></p>
+                <input id="input" name="message" placeholder="What would you like to tell us.." required></input>
+            
+                <button id="button" onclick="formSended()" type="submit">Send Message</button>
             </form>
+            
 
         </section>
 
