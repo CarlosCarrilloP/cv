@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carlos Carrillo</title>
-    <link rel="stylesheet" href="style.css">
+    <link id="estilos" rel="stylesheet" href="style.css">
     <!-- libreria que vamos a utililzar para los alerts es Sweet alert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="index.js" defer></script>
+    
 </head>
 
 <body class="body">
@@ -25,18 +25,21 @@
                     <li class="rest"><a href="#projects">Projects</a></li>
                     <li class="rest"><a href="#contact">Contact</a></li>
                     <li class="rest"> <a href="#spain"> <img src="./media/espana.png" alt="" width="20px" ></a></li>
-                    <li class="rest"><button class="theme-btn"></li>
+                    <li class="rest"><label tabindex="0" class="switch">
+                        <input type="checkbox" id="boton-modo">
+                        <span class="slider"></span>
+                      </label></li>
                 </ul>
             </div>
     </header>
-    <main class="slider">
+    <main class="slider2s">
         <section id="home">
             <div id="left">
                 <h1 class="hi"> <span class="man">👋</span> Hi, I'm </h1>
                 <h2 class="name"> Carlos Carrillo Pérez</h2> <br>
                 <div class="softwaredev">
-                    <h3>Web Developer</h3>
-                <h6>carlos1997bnf@gmail.com</h6>
+                    <h3 class="web">Web Developer</h3>
+                <h6 class="email">carloscarrillodeveloper@gmail.com</h6>
                 </div>
                 <ul class="software">
                     <img class="bounce-top" src="./media/html-5.png" alt="a" width="50px">
@@ -148,7 +151,7 @@
             
 
         </section>
-
+        <script src="index2.js" defer></script>
     </main>
 
     <footer>

@@ -1,7 +1,7 @@
 body {
   margin: 0px;
   padding: 0px;
-  background-color: #eff0f3;
+  background-color: #e8e8e8;
   overflow-x: hidden;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -87,8 +87,14 @@ body {
 }
 .softwaredev {
   font-size: 40px;
+  margin-bottom: 15%;
+}
+.web{
   margin-left: 25%;
-  margin-bottom: 10%;
+}
+.email{
+  margin-left: 15%;
+  font-size: 28px;
 }
 .software {
   font-size: 40px;
@@ -1031,11 +1037,57 @@ a {
   color: #000000;
 }
 
-.slider{
+.slider2{
   overflow-y: scroll;
   scroll-snap-type:y mandatory;
 }
 
-section{
-  scroll-snap-align: start;
+.switch input {
+  display: none;
+}
+
+.switch {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: 50px;
+  height: 24px;
+  background: #4d4d4d;
+  border-radius: 100px;
+  padding: 0 2px;
+  transition: .3s;
+  cursor: pointer;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 100px;
+  transition: .3s;
+  border: 1px solid transparent;
+  z-index: 1000;
+}
+
+.icon {
+  display: block;
+  position: absolute;
+  transition: .3s;
+}
+
+
+.switch:hover .slider, .switch:focus .slider {
+  border: 1px solid #4d4d4d;
+  box-shadow: 0 0 2px 3px #38cbd0;
+}
+
+.switch:active .slider {
+  box-shadow: 0 0 5px 5px #38cbd0;
+}
+
+.switch input:checked+.slider {
+  transform: translateX(26px);
 }
