@@ -36,26 +36,46 @@ function enviarFormulario() {
   }
   
   ////////LIGHT-DARK MODE//////
-  // Obtén una referencia al botón
-  const botonModo = document.getElementById('boton-modo');
-  
-  // Escucha el evento de clic en el botón
-  botonModo.addEventListener('click', cambiarModo);
-  
-  // Función para cambiar el modo
-  function cambiarModo() {
-    // Obtén una referencia al elemento <link> que contiene el archivo de estilos
-    const enlaceEstilos = document.getElementById('estilos');
-  
-    // Verifica si el archivo de estilos actual es el estilo claro (style.css)
-    if (enlaceEstilos.href.includes('style.css')) {
-      // Cambia el archivo de estilos a dark.css
-      enlaceEstilos.href = 'dark.css';
-    } else {
-      // Cambia el archivo de estilos a style.css
-      enlaceEstilos.href = 'style.css';
-    }
-  }
-  
 
- 
+// Obtén una referencia al botón
+const botonModo = document.getElementById('boton-modo');
+
+
+
+// Escucha el evento de clic en el botón
+botonModo.addEventListener('click', cambiarModo);
+
+// Función que se ejecuta cuando se hace clic en el botón
+function cambiarModo() {
+  const body = document.body;
+  body.classList.toggle('background-dark');
+
+  const name = document.getElementsByClassName('name')[0];
+  name.classList.toggle('name-dark');
+  
+  const titulo = document.getElementsByClassName('titulo')[0];
+  titulo.classList.toggle('titulo-dark');
+
+  const web = document.getElementsByClassName('web')[0];
+  web.classList.toggle('web-dark');
+
+  const email = document.getElementsByClassName('email')[0];
+  email.classList.toggle('email-dark');
+
+  const habout = document.getElementsByClassName('habout')[0];
+  habout.classList.toggle('habout-dark');
+
+  const pabout = document.getElementsByClassName('pabout')[0];
+  pabout.classList.toggle('pabout-dark');
+
+  const hprojects = document.getElementsByClassName('hprojects')[0];
+  hprojects.classList.toggle('hprojects-dark');
+  
+}
+
+
+
+
+
+  
+ ///////Bounce de los iconos del section about cuando llega el viewport////////////

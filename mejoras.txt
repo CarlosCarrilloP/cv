@@ -1,10 +1,10 @@
-viewport activar mov del section
+viewport activar movimiento de los iconos del primer section, que se muevan cuando llega el viewport y no cuando empieza la pagina a cargar
 scroll saltar de section a otra section
 
-modo oscuro?
+modo oscuro? HECHO
 
 
-formulario con php
+formulario con php HECHO
 Alert libreria swap
 
-correo al gmail con los datos introducidos
+correo al gmail con los datos introducidos ?
