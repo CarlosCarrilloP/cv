@@ -13,11 +13,8 @@
 </head>
 
 <body class="background">
-
-
     <header>
         <div id="menuDemo">
-            <!--start CssMenu-->
             <div id="cssmenu">
                 <ul>
                     <li class="first"><a href="#home">Home</a></li>
@@ -32,8 +29,8 @@
                 </ul>
             </div>
     </header>
-    <main class="slider2">
-        <section id="home">
+    <main class="scroll-container">
+        <section id="home" class="scroll-snap mandatory">
             <div id="left">
                 <h1 class="titulo"> <span class="man">👋</span> Hi, I'm </h1>
                 <h2 class="name"> Carlos Carrillo Pérez</h2> <br>
@@ -58,7 +55,7 @@
             </div>
         </section>
 
-        <section id="about">
+        <section id="about" class="scroll-snap mandatory">
             <div class="grid-container2">
                 <div class="leftAbout">
                     <img class="fotoabout" src="./media/desarrollo-software-i-cloud-seven-3.png" width="500px"
@@ -74,20 +71,19 @@
                 </div>
                 <div class="bottonAbout">
                     <a href="mailto:carlos1997bnf@gmail.com" title="email" target="_blank">
-                        <img class="bounce-top2" src="./media/icons8-mail-100.png" alt="email">
+                        <img class="img-about-me" src="./media/icons8-mail-100.png" alt="email">
                     </a>
 
                     <a href="https://www.linkedin.com/in/carlos-carrillo-p%C3%A9rez-b27094224/" target="_blank">
-                        <img class="bounce-top2" src="./media/icons8-linkedin-100.png" alt="linkedin">
+                        <img class="img-about-me" src="./media/icons8-linkedin-100.png" alt="linkedin">
                     </a>
 
-
                     <a href="https://www.instagram.com/kcarlos23" target="_blank">
-                        <img class="bounce-top2" src="./media/icons8-instagram-100.png" alt="instagram">
+                        <img class="img-about-me" src="./media/icons8-instagram-100.png" alt="instagram">
                     </a>
 
                     <a href="https://github.com/CarlosCarrilloP" target="_blank">
-                        <img class="bounce-top2" src="./media/icons8-github-100.png" alt="github">
+                        <img class="img-about-me" src="./media/icons8-github-100.png" alt="github">
                     </a>
                 </div>
             </div>
@@ -95,7 +91,7 @@
         </section>
 
 
-        <section id="projects"> <!--- pensar como escalar este botón, desplegable y que explique el proyect?-->
+        <section id="projects" class="scroll-snap mandatory"> <!--- pensar como escalar este botón, desplegable y que explique el proyect?-->
             <div class="projects">
                 <div class="tittleprojects">
                     <h3 class="hprojects">Last projects</h3>
@@ -133,25 +129,25 @@
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="scroll-snap mandatory">
 
-            <form class="form" method="post" action="sendform.php">
+            <form id="form"    class="form" >
                 <h2 id="h2">📧Contact me:</h2>
                 <p id="p p2">Name: <span class="star">*</span></p>
-                <input id="input" name="name" placeholder="Write your name here.." required></input>
+                <input class="input" id="name" placeholder="Write your name here.." required></input>
             
                 <p id="p p2">Email: <span class="star">*</span></p>
-                <input id="input" name="email" placeholder="Let us know how to contact you back.." required></input>
+                <input class="input"  type="email" id="email" placeholder="Let us know how to contact you back.." required></input>
             
                 <p id="p p2">Message: <span class="star">*</span></p>
-                <input id="input" name="message" placeholder="What would you like to tell us.." required></input>
+                <input class="input" id="message" placeholder="What would you like to tell us.." required></input>
             
-                <button id="button" onclick="formSended()" type="submit">Send Message</button>
+                <button id="button" onclick="enviarFormulario()" type="button">Send Message</button>
             </form>
             
 
         </section>
-        <script src="index2.js" defer></script>
+        <script src="index.js" defer></script>
     </main>
 
     <footer>
@@ -187,3 +183,4 @@
 
     </footer>
 </body>
+</html>

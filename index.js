@@ -1,39 +1,54 @@
-
 ///////////FORMULARIO//////////
 function enviarFormulario() {
     // Obtener los datos del formulario
-    var name = document.getElementById("input-name").value;
-    var email = document.getElementById("input-email").value;
-    var message = document.getElementById("input-message").value;
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
   
     // Realizar la petición AJAX
     fetch("sendform.php", {
       method: "POST",
+      headers:{
+        "Content-Type": "application/json"
+      },
       body: JSON.stringify({
         name: name,
         email: email,
         message: message
       })
     })
-    .then(function(response) {
-      return response.text();
+    .then(function(response){
+        return response.json();
     })
-    .then(function(data) {
-      // Mostrar el mensaje de respuesta
-      alert(data);
+    .then(function(responseJson) {
+      console.log(responseJson);
+        if (responseJson.success) {
+          console.log("Hola");
+          swal({
+            title: responseJson.message,
+            icon: "success"
+            
+          });
+        } else {
+          console.log("H");
+          swal({
+            title: responseJson.message,
+            icon: "error"
+          });
+        }
+    })
+    .finally(function(){
+      // Limpiar los campos del formulario
+
+      document.getElementById("form").reset();
+    
     })
     .catch(function(error) {
       console.error("Hubo un error al enviar el formulario:", error);
     });
+
   }
-  // Función que se ejecuta cuando se hace clic en el botón "Enviar Formulario"
-  function formSended() {
-      swal({
-        title: "¡Formulario enviado correctamente!",
-        icon: "success"
-      });
-    
-  }
+  
   
   ////////LIGHT-DARK MODE//////
 
@@ -73,9 +88,23 @@ function cambiarModo() {
   
 }
 
-
-
-
-
-  
  ///////Bounce de los iconos del section about cuando llega el viewport////////////
+
+// Crear una instancia del Intersection Observer
+var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var btn = document.querySelectorAll('.img-about-me');
+        btn.forEach(function(element) {
+          element.classList.add('bounce-top2');
+        });
+      }
+    });
+  });
+  
+  // Observar el elemento objetivo
+  var bottonAbout = document.querySelector('.bottonAbout');
+  if (bottonAbout && bottonAbout.offsetHeight > 0) {
+    observer.observe(bottonAbout);
+  }
+  

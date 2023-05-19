@@ -1,14 +1,28 @@
 .background {
-  margin: 0px;
-  padding: 0px;
   background-color: #e8e8e8;
-  overflow-x: hidden;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
   /*background-color: #15151e; Para modo oscuro*/
+}
+.scroll-container {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  height: 90vh;
+}
+
+section {
+  height: 90vh;
+  scroll-snap-align: start;
+}
+
+.scroll-snap {
+  scroll-snap-stop: normal;
+  scroll-snap-align: start;
+}
+
+.mandatory {
+  scroll-snap-type: y mandatory;
 }
 .background-dark {
     margin: 0px;
@@ -18,8 +32,7 @@
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
+
     
   }
 
@@ -74,7 +87,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  scroll-snap-type: y mandatory;
+  
 }
 #about {
   height: 90vh;
@@ -82,7 +95,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  scroll-snap-type: y mandatory;
+  
 }
 #projects {
   height: 90vh;
@@ -90,7 +103,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  scroll-snap-type: y mandatory;
+  
 }
 #contact {
   height: 90vh;
@@ -98,7 +111,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  scroll-snap-type: y mandatory;
+  
 }
 .titulo {
   font-size: 40px;
@@ -200,7 +213,7 @@ a:link {
   color: #000000;
   border-bottom: 3px solid #000000;
 }
-#input {
+.input {
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
@@ -212,7 +225,7 @@ a:link {
   transition: all 0.3s;
   border-bottom: 2px solid #000000;
 }
-#input:focus {
+.input:focus {
   border-bottom: 2px solid #000000;
 }
 #p:before {
@@ -638,6 +651,7 @@ a {
     opacity: 1;
   }
 }
+
 
 /* Animacion de los lenguajes en about*/
 .bounce-top2 {
@@ -1239,11 +1253,6 @@ a {
 
 #p2 {
   color: #000000;
-}
-
-.slider2{
-  overflow-y: scroll;
-  scroll-snap-type:y mandatory;
 }
 
 .switch input {
