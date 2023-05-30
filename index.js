@@ -1,12 +1,12 @@
 ///////////FORMULARIO//////////
 function enviarFormulario() {
   // Obtener los datos del formulario
-  var name = document.getElementById("name").value;
-  var email = document.getElementById("email").value;
-  var message = document.getElementById("message").value;
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
 
   // Validar el formato del correo electrónico
-  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     swal({
       title: "Correo electrónico inválido",
